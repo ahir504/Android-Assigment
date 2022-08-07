@@ -25,6 +25,18 @@ interface ProductDao {
     @Update
     fun updateProduct(product: Product)
 
+    @Update
+    fun updateStore(stores: Stores)
+
+    @Update
+    fun updateColor(colors: Colors)
+
+    @Update
+    fun updateProductAndColorCrossRef(productAndColorCrossRef: ProductAndColorCrossRef)
+
+    @Update
+    fun updateProductAndStoreCrossRef(productStoreCrossRef: ProductStoreCrossRef)
+
     @Delete
     fun deleteProduct(product: Product)
 
