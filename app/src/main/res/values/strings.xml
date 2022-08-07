@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android Assigment</string>
+    <string name="show_product">Show Product</string>
+    <string name="create_product">Create Product</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="update_product">Update Product</string>
+    <string name="image_of_product">Image of Product</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_description">Product Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="sale_price">Sale Price</string>
+</resources>
