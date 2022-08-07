@@ -12,5 +12,4 @@ data class Product(
     val regularPrice: Float,
     val salePrice: Float,
     val productImage: String,
-    val color: String,
 )

@@ -1,5 +1,5 @@
 package com.example.androidassigment.model
 
-data class Stores(
-    val storeModel : List<StoreModel>
+data class Store(
+    val stores : List<StoreModel>
 )

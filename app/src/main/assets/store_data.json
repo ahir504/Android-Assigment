@@ -1,18 +1,23 @@
 {
   "stores": [
     {
+      "storeId" : 1,
       "storeName": "Store1"
     },
     {
+      "storeId" : 2,
       "storeName": "Store2"
     },
     {
+      "storeId" : 3,
       "storeName": "Store3"
     },
     {
+      "storeId" : 4,
       "storeName": "Store4"
     },
     {
+      "storeId" : 5,
       "storeName": "Store5"
     }
   ]

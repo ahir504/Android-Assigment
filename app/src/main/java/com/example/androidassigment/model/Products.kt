@@ -1,7 +1,7 @@
 package com.example.androidassigment.model
 
 data class Products(
-    val color: List<String>,
+    val color: List<Color>,
     val description: String,
     val id: Int,
     val name: String,

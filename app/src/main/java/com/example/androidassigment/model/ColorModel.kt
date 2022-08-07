@@ -1,4 +1,5 @@
 package com.example.androidassigment.model
 
-class ColorModel {
-}
+data class ColorModel (
+    val color : List<Color>
+)

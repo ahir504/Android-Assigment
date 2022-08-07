@@ -6,19 +6,7 @@
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "regularPrice" : 500,
       "salePrice" : 450,
-      "productImage" : "",
-      "color" : [
-        "color1",
-        "color2",
-        "color3",
-        "color4",
-        "color5"
-      ],
-      "storeModel" : [
-        {   "storeName" : "Store1"},
-        {   "storeName" : "Store4"},
-        {   "storeName" : "Store5"}
-      ]
+      "productImage" : ""
     },
     {
       "id" : 2,
@@ -26,19 +14,7 @@
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "regularPrice" : 500.0,
       "salePrice" : 450.0,
-      "productImage" : "",
-      "color" : [
-        "color1",
-        "color2",
-        "color3",
-        "color4",
-        "color5"
-      ],
-      "storeModel" : [
-        {   "storeName" : "Store2"},
-        {   "storeName" : "Store3"},
-        {   "storeName" : "Store4"},
-      ]
+      "productImage" : ""
     },
     {
       "id" : 3,
@@ -46,19 +22,7 @@
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "regularPrice" : 500,
       "salePrice" : 450,
-      "productImage" : "",
-      "color" : [
-        "color1",
-        "color2",
-        "color3",
-        "color4",
-        "color5"
-      ],
-      "storeModel" : [
-        {   "storeName" : "Store1"},
-        {   "storeName" : "Store2"},
-        {   "storeName" : "Store4"},
-      ]
+      "productImage" : ""
     }
   ]
 }

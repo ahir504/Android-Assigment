@@ -1,0 +1,24 @@
+{
+  "color": [
+    {
+      "colorId" : 1,
+      "colorName": "Color1"
+    },
+    {
+      "colorId" : 2,
+      "colorName": "Color2"
+    },
+    {
+      "colorId" : 3,
+      "colorName": "Color3"
+    },
+    {
+      "colorId" : 4,
+      "colorName": "Color4"
+    },
+    {
+      "colorId" : 5,
+      "colorName": "Color5"
+    }
+  ]
+}

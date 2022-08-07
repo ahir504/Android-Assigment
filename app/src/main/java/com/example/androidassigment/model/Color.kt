@@ -1,4 +1,6 @@
 package com.example.androidassigment.model
 
-class Color {
-}
+data class Color(
+    val colorId : Int,
+    val colorName : String
+)

@@ -4,14 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.androidassigment.entity.Product
-import com.example.androidassigment.entity.ProductStoreCrossRef
-import com.example.androidassigment.entity.Stores
+import com.example.androidassigment.entity.*
 import com.example.androidassigment.util.Constant
 
 @Database(
-    entities = [Product::class, Stores::class, ProductStoreCrossRef::class],
-    version = 2,
+    entities = [Product::class, Stores::class, Colors::class, ProductStoreCrossRef::class, ProductAndColorCrossRef::class],
+    version = 1,
     exportSchema = false
 )
 abstract class ProductDataBase : RoomDatabase() {
