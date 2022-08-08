@@ -3,6 +3,9 @@ package com.example.androidassigment.dataBase
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.androidassigment.entity.*
+import com.example.androidassigment.model.Color
+import com.example.androidassigment.model.Products
+import com.example.androidassigment.model.StoreModel
 
 @Dao
 interface ProductDao {
@@ -41,29 +44,43 @@ interface ProductDao {
     fun deleteProduct(product: Product)
 
     @Transaction
-    @Query("DELETE FROM product")
-    fun deleteAllProduct()
+    @Query("DELETE FROM product WHERE productId =:productId")
+    fun deleteProductById(productId: Int)
 
     @Transaction
-    @Query("SELECT * FROM product ORDER BY productId ")
-    fun readAllProduct(): LiveData<List<Product>>
+    @Query("DELETE FROM productstorecrossref WHERE productId =:productId")
+    fun deleteProductAndStore(productId: Int)
 
     @Transaction
-    @Query("SELECT * FROM stores")
-    fun readAllStores(): LiveData<List<Stores>>
+    @Query("DELETE FROM productandcolorcrossref WHERE productId =:productId")
+    fun deleteProductAndColor(productId: Int)
+
+    @Transaction
+    @Query("SELECT * FROM product")
+    fun readAllProduct(): LiveData<List<Products>>
+
+    @Transaction
+    @Query("SELECT * FROM stores WHERE storeId = :storeId")
+    fun readAllStoresById(storeId: Int): LiveData<List<StoreModel>>
 
     @Transaction
     @Query("SELECT * FROM colors")
-    fun readAllColors(): LiveData<List<Colors>>
+    fun readAllColors(): LiveData<List<Color>>
+
+    @Transaction
+    @Query("SELECT * FROM stores")
+    fun readAllStores(): LiveData<List<StoreModel>>
+
+    @Transaction
+    @Query("SELECT * FROM colors WHERE colorId = :colorId")
+    fun readAllColorsById(colorId: Int): LiveData<List<Color>>
 
     @Transaction
     @Query("SELECT * FROM productstorecrossref WHERE productId = :productId")
-    fun getAllProductWithStore(productId : Int): LiveData<List<ProductStoreCrossRef>>
+    fun getAllProductWithStore(productId: Int): LiveData<List<ProductStoreCrossRef>>
 
     @Transaction
     @Query("SELECT * FROM productandcolorcrossref WHERE productId = :productId")
     fun getAllProductWithColor(productId: Int): LiveData<List<ProductAndColorCrossRef>>
-
-
 
 }

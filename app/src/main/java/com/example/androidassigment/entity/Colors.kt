@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class Colors(
     @PrimaryKey(autoGenerate = true)
     val colorId : Int,
-    val color :String
+    val colorName :String
 )

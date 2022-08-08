@@ -1,6 +1,5 @@
 package com.example.androidassigment.adapter
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -13,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidassigment.R
 import com.example.androidassigment.model.ProductModel
 import com.example.androidassigment.model.Products
+import com.example.androidassigment.model.StoreModel
 import com.example.androidassigment.ui.DisplayProductActivity
 import com.example.androidassigment.util.Constant
 
-class ProductListAdapter(private val context: Context, private  val products: List<Products>) : RecyclerView.Adapter<ProductListAdapter.MyViewHolder>() {
+class StoreListAdapter(private val context: Context, private  val store: List<StoreModel>) : RecyclerView.Adapter<StoreListAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val productName: TextView = itemView.findViewById(R.id.tv_productListNames)
-        val cvClick: CardView = itemView.findViewById(R.id.cv_click)
 
     }
 
@@ -30,18 +29,12 @@ class ProductListAdapter(private val context: Context, private  val products: Li
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.productName.text= products[position].productName
-        holder.cvClick.setOnClickListener{
-            val intent = Intent(context,DisplayProductActivity::class.java)
-            intent.putExtra(Constant.PRODUCT_MODEL,products[position])
-            context.startActivity(intent)
-            (context as Activity).finish()
+        holder.productName.text= store[position].storeName
 
-        }
 
     }
 
     override fun getItemCount(): Int {
-        return products.size
+        return store.size
     }
 }

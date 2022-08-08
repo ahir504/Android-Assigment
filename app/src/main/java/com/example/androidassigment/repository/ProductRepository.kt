@@ -1,12 +1,11 @@
 package com.example.androidassigment.repository
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import com.example.androidassigment.dataBase.ProductDao
 import com.example.androidassigment.entity.*
-import com.example.androidassigment.model.ProductModel
-import com.example.androidassigment.util.Constant
-import com.example.androidassigment.util.Util
+import com.example.androidassigment.model.Color
+import com.example.androidassigment.model.Products
+import com.example.androidassigment.model.StoreModel
 
 class ProductRepository(private val productDao: ProductDao) {
 
@@ -23,6 +22,23 @@ class ProductRepository(private val productDao: ProductDao) {
         productDao.addColor(color)
     }
 
+    fun updateProduct(product: Product){
+        productDao.updateProduct(product)
+    }
+
+
+    fun deleteProductById(productId: Int){
+        productDao.deleteProductById(productId)
+    }
+
+    fun deleteProductStore(productId :Int){
+        productDao.deleteProductAndStore(productId)
+    }
+
+    fun deleteProductColor(productId: Int){
+        productDao.deleteProductAndColor(productId)
+    }
+
     fun addProductAndStoreCrossRef(productStoreCrossRef: ProductStoreCrossRef){
         productDao.addProductAndStoreCrossRef(productStoreCrossRef)
     }
@@ -31,7 +47,22 @@ class ProductRepository(private val productDao: ProductDao) {
         productDao.addProductAndColorCrossRef(productAndColorCrossRef)
     }
 
-    fun getAllProduct() : LiveData<List<Product>>{
+    fun readAllColorsById(colorId :Int) : LiveData<List<Color>>{
+        return productDao.readAllColorsById(colorId)
+    }
+
+    fun readAllColors() : LiveData<List<Color>>{
+        return productDao.readAllColors()
+    }
+
+    fun readAllStore() : LiveData<List<StoreModel>>{
+        return productDao.readAllStores()
+    }
+
+    fun readAllStoreById(productId : Int) : LiveData<List<StoreModel>>{
+        return productDao.readAllStoresById(productId)
+    }
+    fun getAllProduct() : LiveData<List<Products>>{
         return productDao.readAllProduct()
     }
 

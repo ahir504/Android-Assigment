@@ -31,6 +31,7 @@ abstract class ProductDataBase : RoomDatabase() {
                     Constant.DATABASE
                 )
                     .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
                     .build().also {
                         INSTANCE = it
                     }
